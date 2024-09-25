@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 05</title>
+  <!-- DaisyUI & Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font(Lexend) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            secondary: '#B4F461',
+          },
+          fontfamily: {
+            lexend: ['Lexend', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-lexend">
+  <!-- Header Section -->
+  <header class="sticky top-0 backdrop-blur-md border-b-2">
+    <div class="bg-green-500 bg-opacity-60">
+      <div class="container mx-auto flex items-center justify-between py-4 px-2">
+        <!-- Home Button -->
+        <button id="home-btn" class="btn bg-secondary text-xl font-bold rounded-xl h-16 px-8 text-center">Home</button>
+        <!-- Logo -->
+        <div class="hidden md:flex justify-center items-center">
+          <img src="./assets/logo.png" alt="logo" class="pr-1">
+          <p class="text-2xl font-medium">Ass Sunnah Foundation</p>
+        </div>
+        <!-- Balance -->
+        <div class="flex justify-center">
+          <img src="./assets/coin.png" alt="coin" class="pr-1">
+          <h3 class="font-medium text-xl"><span id="my-balance">5500</span>BDT</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Faq Section -->
+  <section class="container mx-auto">
+    <div class="flex items-center">
+      <h2 class="text-4xl md:text-5xl font-bold px-2 py-8 md:py-12">Important FAQ</h2>
+      <img src="./assets/q-and-a.gif" class="h-20">
+    </div>
+    <div class="space-y-4">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure
+            of a document
+            (usually HTML or XML) as a tree of objects, allowing programming languages, particularly JavaScript, to
+            interact with
+            and manipulate the content, structure, and style of web pages.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>Selecting elements from the DOM can be done using various methods provided by the Document Object Model
+            (DOM) API. Here
+            are some of the most commonly used methods:<br>
+            1. getElementById<br>
+            2. getElementsByClassName<br>
+            3. getElementsByTagName<br>
+            4. querySelector<br>
+            5. querySelectorAll.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why it
+          is usefull?</div>
+        <div class="collapse-content">
+          <p>Event delegation leverages event bubbling to handle events at a parent level.<br>
+            It improves performance, supports dynamic content, and results in cleaner code.<br>
+            It simplifies the management of event listeners, making it a useful pattern in JavaScript development.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and style using
+          the DOM?</div>
+        <div class="collapse-content">
+          <p>Attributes: Use getAttribute(), setAttribute(), and removeAttribute() to manipulate attributes.<br>
+            Styles: Use the style property to set, get, and remove inline styles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/faq.js"></script>
+</body>
+
+</html>
